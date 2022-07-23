@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
     var isAnimating = false
     var gestureLastState: UIGestureRecognizer.State = .began
     var imageName = "chip1"
+    var player = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,9 @@ class ViewController: UIViewController {
         chipIndicator = UIImageView(frame: CGRect(x: 0, y: -100, width: slotWidth, height: slotWidth))
         chipIndicator.image = UIImage(named: "arrowDown")
         currentChip.image = UIImage(named: getImageName())
+        currentChip.layer.borderWidth = 4.0
+        currentChip.layer.borderColor = UIColor.white.cgColor
+        currentChip.layer.cornerRadius = currentChip.frame.width / 2
 
         board = [[Int]](repeating: [Int](repeating: 0, count: self.rows), count: self.columns)
 
@@ -125,6 +130,7 @@ class ViewController: UIViewController {
         self.view.addSubview(view)
         self.view.bringSubviewToFront(self.boardImage)
         self.currentChip.image = UIImage(named: self.getImageName(toggle: true))
+        self.player = self.player == 1 ? 2 : 1
     }
 
     @objc func addAnnotationOnLongPress(gesture: UILongPressGestureRecognizer) {
@@ -160,6 +166,7 @@ class ViewController: UIViewController {
 
         case .ended:
             isAnimating = true
+
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseInOut) {
                 self.chip.center = self.getCenterPoint(with: point)
             } completion: { finished in
@@ -174,7 +181,8 @@ class ViewController: UIViewController {
                 self.chip.frame.origin.y = distance
             } completion: { finished in
                 self.isAnimating = false
-                self.savePosition(for: 1)
+                self.savePosition(for: self.player)
+                self.check(this: self.player)
                 self.createChip(with: distance)
                 self.chip.removeFromSuperview()
             }
@@ -190,6 +198,88 @@ class ViewController: UIViewController {
             break
         }
     }
+
+    func check(this player: Int) {
+        var numConnected = 0
+        // COLUMN WINNER
+        for x in 0...columns - 1 {
+            numConnected = 0
+            board[x].forEach { num in
+                numConnected = num == player ? numConnected + 1 : 0
+                if numConnected == 4 {
+                    isWinner(connect4: numConnected)
+                }
+            }
+
+        }
+
+        // ROW WINNER
+        numConnected = 0
+        for y in 0...rows - 1 {
+            for x in 0...columns - 1 {
+                numConnected = board[x][y] == player ? numConnected + 1 : 0
+                isWinner(connect4: numConnected)
+            }
+        }
+
+        // DIAGONAL WINNER
+        for x in 0...columns - 1 {
+            for y in 0...rows - 1 {
+                checkNext3(x: x, y: y)
+            }
+        }
+    }
+
+    func checkNext3(x: Int, y: Int){
+        if isInsideBoard(x: x, y: y, isAscending: true){
+            if board[x][y] == player && board[x+1][y+1] == player && board[x+2][y+2] == player && board[x+3][y+3] == player {
+                isWinner(connect4: 4)
+            }
+        }
+        if isInsideBoard(x: x, y: y, isDescending: true){
+            if board[x][y] == player && board[x+1][y-1] == player && board[x+2][y-2] == player && board[x+3][y-3] == player {
+                isWinner(connect4: 4)
+            }
+        }
+    }
+
+    func isInsideBoard(x: Int, y: Int, isAscending: Bool = false, isDescending: Bool = false) -> Bool{
+        var position = 0
+        var isXOK = false
+        var isYOK = false
+        if isAscending {
+            position = x + 3
+            isXOK = position >= 0 && position <= columns && position <= rows ? true : false
+            position = y + 3
+            isYOK = position >= 0 && position <= columns && position <= rows ? true : false
+            return isXOK && isYOK
+        }
+        if isDescending {
+            position = x + 3
+            isXOK = position >= 0 && position <= columns && position <= rows ? true : false
+            position = y - 3
+            isYOK = position >= 0 && position <= columns && position <= rows ? true : false
+            return isXOK && isYOK
+        }
+
+        return false
+    }
+
+    func isWinner(connect4: Int) {
+        if connect4 == 4 {
+            let storyboard = UIStoryboard(name: "WinnerController", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "WinnerController")
+
+            if let presentationController = viewController.presentationController as? UISheetPresentationController {
+                presentationController.detents = [.large()] /// change to [.medium(), .large()] for a half *and* full screen sheet
+            }
+
+            self.present(viewController, animated: true) {
+                print("algo pasa    ")
+            }
+        }
+    }
+
 
     @IBAction func startButtonPressed(_ sender: Any) {
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Winner Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WinnerController" id="Y6W-OH-hqX" customClass="WinnerController" customModule="connect4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agp-Mk-Rw2" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="1" green="0.83789515459999997" blue="0.79879201320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="67230-trophy-winner"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="1" green="0.83789515459999997" blue="0.79879201320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="agp-Mk-Rw2" secondAttribute="bottom" id="Yj9-dP-TlH"/>
+                            <constraint firstItem="agp-Mk-Rw2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bcn-4u-QAq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="agp-Mk-Rw2" secondAttribute="trailing" id="jFY-b0-Y8E"/>
+                            <constraint firstItem="agp-Mk-Rw2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="owf-Z5-fFb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="agp-Mk-Rw2" id="B24-1g-Y6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="99"/>
+        </scene>
+    </scenes>
+</document>

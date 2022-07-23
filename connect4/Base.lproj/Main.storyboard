@@ -55,7 +55,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="vD4-A3-LrI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4pi-fI-GkU"/>
                             <constraint firstItem="OwP-Zr-nSl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KH5-Nc-oz9"/>
@@ -88,8 +88,8 @@
     <resources>
         <image name="board" width="817" height="728"/>
         <image name="boardbg" width="817" height="728"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
