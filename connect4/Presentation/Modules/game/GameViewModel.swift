@@ -54,6 +54,7 @@ extension GameViewModel {
     func changePlayer(){
         player = player == .one ? .two : .one
     }
+
     func getPositionWithLimits(current position: CGPoint) -> CGPoint {
         let limitY = boardImage.frame.origin.y + self.slotHeight / 2
         var newPoint = position
