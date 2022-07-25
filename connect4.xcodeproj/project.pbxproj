@@ -9,28 +9,32 @@
 /* Begin PBXBuildFile section */
 		C166B155288741B800810B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B154288741B800810B89 /* AppDelegate.swift */; };
 		C166B157288741B800810B89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B156288741B800810B89 /* SceneDelegate.swift */; };
-		C166B159288741B800810B89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B158288741B800810B89 /* ViewController.swift */; };
-		C166B15C288741B800810B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C166B15A288741B800810B89 /* Main.storyboard */; };
+		C166B159288741B800810B89 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B158288741B800810B89 /* GameController.swift */; };
 		C166B15E288741BA00810B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C166B15D288741BA00810B89 /* Assets.xcassets */; };
 		C166B161288741BA00810B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C166B15F288741BA00810B89 /* LaunchScreen.storyboard */; };
 		C1B4AC76288ABA5A0015C1C5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C1B4AC75288ABA5A0015C1C5 /* Lottie */; };
-		C1B4AC79288ABF5E0015C1C5 /* WinnerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC78288ABF5E0015C1C5 /* WinnerController.storyboard */; };
+		C1B4AC79288ABF5E0015C1C5 /* WinnerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC78288ABF5E0015C1C5 /* WinnerView.storyboard */; };
 		C1B4AC7B288ABF770015C1C5 /* WinnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC7A288ABF770015C1C5 /* WinnerController.swift */; };
 		C1B4AC7D288AC0A30015C1C5 /* 67230-trophy-winner.json in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC7C288AC0A20015C1C5 /* 67230-trophy-winner.json */; };
+		C1B4AC86288BFF590015C1C5 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC85288BFF590015C1C5 /* GameViewModel.swift */; };
+		C1B4AC8B288E98470015C1C5 /* GameView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC8A288E98470015C1C5 /* GameView.storyboard */; };
+		C1B4AC8D288E9D440015C1C5 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC8C288E9D440015C1C5 /* GameRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C166B151288741B800810B89 /* connect4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C166B154288741B800810B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C166B156288741B800810B89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C166B158288741B800810B89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C166B15B288741B800810B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C166B158288741B800810B89 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		C166B15D288741BA00810B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C166B160288741BA00810B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C166B162288741BA00810B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1B4AC78288ABF5E0015C1C5 /* WinnerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinnerController.storyboard; sourceTree = "<group>"; };
+		C1B4AC78288ABF5E0015C1C5 /* WinnerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinnerView.storyboard; sourceTree = "<group>"; };
 		C1B4AC7A288ABF770015C1C5 /* WinnerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerController.swift; sourceTree = "<group>"; };
 		C1B4AC7C288AC0A20015C1C5 /* 67230-trophy-winner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "67230-trophy-winner.json"; sourceTree = "<group>"; };
+		C1B4AC85288BFF590015C1C5 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		C1B4AC8A288E98470015C1C5 /* GameView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameView.storyboard; sourceTree = "<group>"; };
+		C1B4AC8C288E9D440015C1C5 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +68,9 @@
 		C166B153288741B800810B89 /* connect4 */ = {
 			isa = PBXGroup;
 			children = (
-				C1B4AC7C288AC0A20015C1C5 /* 67230-trophy-winner.json */,
-				C1B4AC77288ABF420015C1C5 /* winner */,
-				C166B154288741B800810B89 /* AppDelegate.swift */,
-				C166B156288741B800810B89 /* SceneDelegate.swift */,
-				C166B158288741B800810B89 /* ViewController.swift */,
-				C166B15A288741B800810B89 /* Main.storyboard */,
-				C166B15D288741BA00810B89 /* Assets.xcassets */,
-				C166B15F288741BA00810B89 /* LaunchScreen.storyboard */,
 				C166B162288741BA00810B89 /* Info.plist */,
+				C1B4AC82288BFEBE0015C1C5 /* Presentation */,
+				C1B4AC81288BFE9A0015C1C5 /* Resources */,
 			);
 			path = connect4;
 			sourceTree = "<group>";
@@ -80,10 +78,58 @@
 		C1B4AC77288ABF420015C1C5 /* winner */ = {
 			isa = PBXGroup;
 			children = (
-				C1B4AC78288ABF5E0015C1C5 /* WinnerController.storyboard */,
+				C1B4AC78288ABF5E0015C1C5 /* WinnerView.storyboard */,
 				C1B4AC7A288ABF770015C1C5 /* WinnerController.swift */,
 			);
 			path = winner;
+			sourceTree = "<group>";
+		};
+		C1B4AC80288BFE870015C1C5 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC8A288E98470015C1C5 /* GameView.storyboard */,
+				C1B4AC85288BFF590015C1C5 /* GameViewModel.swift */,
+				C166B158288741B800810B89 /* GameController.swift */,
+				C1B4AC8C288E9D440015C1C5 /* GameRouter.swift */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
+		C1B4AC81288BFE9A0015C1C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC7C288AC0A20015C1C5 /* 67230-trophy-winner.json */,
+				C166B15D288741BA00810B89 /* Assets.xcassets */,
+				C166B15F288741BA00810B89 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C1B4AC82288BFEBE0015C1C5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC83288BFECB0015C1C5 /* App */,
+				C1B4AC84288BFED70015C1C5 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C1B4AC83288BFECB0015C1C5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C166B154288741B800810B89 /* AppDelegate.swift */,
+				C166B156288741B800810B89 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C1B4AC84288BFED70015C1C5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C1B4AC80288BFE870015C1C5 /* game */,
+				C1B4AC77288ABF420015C1C5 /* winner */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +198,9 @@
 			files = (
 				C166B161288741BA00810B89 /* LaunchScreen.storyboard in Resources */,
 				C166B15E288741BA00810B89 /* Assets.xcassets in Resources */,
-				C166B15C288741B800810B89 /* Main.storyboard in Resources */,
 				C1B4AC7D288AC0A30015C1C5 /* 67230-trophy-winner.json in Resources */,
-				C1B4AC79288ABF5E0015C1C5 /* WinnerController.storyboard in Resources */,
+				C1B4AC8B288E98470015C1C5 /* GameView.storyboard in Resources */,
+				C1B4AC79288ABF5E0015C1C5 /* WinnerView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B4AC86288BFF590015C1C5 /* GameViewModel.swift in Sources */,
 				C1B4AC7B288ABF770015C1C5 /* WinnerController.swift in Sources */,
-				C166B159288741B800810B89 /* ViewController.swift in Sources */,
+				C166B159288741B800810B89 /* GameController.swift in Sources */,
 				C166B155288741B800810B89 /* AppDelegate.swift in Sources */,
+				C1B4AC8D288E9D440015C1C5 /* GameRouter.swift in Sources */,
 				C166B157288741B800810B89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,14 +223,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C166B15A288741B800810B89 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C166B15B288741B800810B89 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C166B15F288741BA00810B89 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,7 +360,7 @@
 				INFOPLIST_FILE = connect4/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = GameView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -349,7 +389,7 @@
 				INFOPLIST_FILE = connect4/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = GameView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
