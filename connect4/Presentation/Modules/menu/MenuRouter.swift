@@ -15,4 +15,10 @@ final class MenuRouter {
         self.viewController = viewController
     }
 
+    func goToGame(){
+        let storyboard = UIStoryboard(name: "GameView", bundle: nil)
+        let gameController = storyboard.instantiateViewController(identifier: "GameView") as GameController
+        gameController.modalPresentationStyle = .fullScreen
+        viewController?.present(gameController, animated: true)
+    }
 }

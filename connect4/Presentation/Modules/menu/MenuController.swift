@@ -22,6 +22,6 @@ class MenuController: UIViewController {
     }
 
     @IBAction func onStartPressed(_ sender: Any) {
-        
+        viewModel.router.goToGame()
     }
 }
