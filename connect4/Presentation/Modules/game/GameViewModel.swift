@@ -67,6 +67,14 @@ extension GameViewModel {
         imageName = imageName == "chip1" ? "chip2" : "chip1"
         return imageName
     }
+
+    func getPlayerColor() -> UIColor {
+        return imageName == "chip1" ? #colorLiteral(red: 0.9418870807, green: 0.632404983, blue: 0.2517617643, alpha: 1) : #colorLiteral(red: 0.8788487315, green: 0.1384550333, blue: 0.05413753539, alpha: 1)
+    }
+
+    func getPlayerName() -> String {
+        return imageName == "chip1" ? "Ganador AMARILLO" :  "Ganador ROJO"
+    }
     
     func getRowPosition(_ centerX: CGFloat) -> Int {
         let position = getColumnPosition(centerX)

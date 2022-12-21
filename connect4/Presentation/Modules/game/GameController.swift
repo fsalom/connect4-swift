@@ -7,6 +7,8 @@ class GameController: UIViewController {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var currentChip: UIImageView!
     @IBOutlet weak var startButton: UIButton!
+    private var animationView: AnimationView?
+
 
     var viewModel: GameViewModel!
     
@@ -114,8 +116,8 @@ class GameController: UIViewController {
             } completion: { finished in
                 self.isAnimating = false
                 self.viewModel.savePosition(centerX: self.chip.center.x)
-                self.check()
                 self.createChip(with: distance)
+                self.check()
                 self.chip.removeFromSuperview()
             }
         case .cancelled:
@@ -128,9 +130,36 @@ class GameController: UIViewController {
 
     func check(){
         if viewModel.isWinner(){
-            viewModel.router.showWinner()
+            animationView = .init(name: "677-trophy")
+            animationView!.frame = self.view.frame
+            animationView!.contentMode = .bottom
+            animationView!.loopMode = .loop
+            animationView!.animationSpeed = 0.5
+            view.addSubview(animationView!)
+            animationView!.play()
+            self.view.bringSubviewToFront(animationView!)
+
+            let winnerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 250, height: 50))
+            winnerLabel.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height - 100)
+            winnerLabel.textAlignment = .center
+            winnerLabel.text = viewModel.getPlayerName()
+            winnerLabel.layer.masksToBounds = true
+            winnerLabel.textColor = .white
+            winnerLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+            winnerLabel.backgroundColor = viewModel.getPlayerColor()
+            winnerLabel.layer.borderColor = UIColor.white.cgColor
+            winnerLabel.layer.borderWidth = 3
+            winnerLabel.layer.cornerRadius = 20
+            view.addSubview(winnerLabel)
+
+            let closeButton = UIButton(frame: self.view.frame)
+            closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
+            view.addSubview(closeButton)
         }
     }
 
+    @objc func close(){
+        dismiss(animated: true)
+    }
 }
 

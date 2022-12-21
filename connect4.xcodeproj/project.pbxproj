@@ -11,6 +11,7 @@
 		C109EFAC29523C9600FC266C /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109EFAB29523C9600FC266C /* MenuViewModel.swift */; };
 		C109EFAE29523CD800FC266C /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109EFAD29523CD800FC266C /* MenuRouter.swift */; };
 		C109EFB029523D1300FC266C /* MenuView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C109EFAF29523D1300FC266C /* MenuView.storyboard */; };
+		C109EFB22952FFFE00FC266C /* 677-trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C109EFB12952FFFE00FC266C /* 677-trophy.json */; };
 		C166B155288741B800810B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B154288741B800810B89 /* AppDelegate.swift */; };
 		C166B157288741B800810B89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B156288741B800810B89 /* SceneDelegate.swift */; };
 		C166B159288741B800810B89 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B158288741B800810B89 /* GameController.swift */; };
@@ -30,6 +31,7 @@
 		C109EFAB29523C9600FC266C /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		C109EFAD29523CD800FC266C /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
 		C109EFAF29523D1300FC266C /* MenuView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuView.storyboard; sourceTree = "<group>"; };
+		C109EFB12952FFFE00FC266C /* 677-trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "677-trophy.json"; sourceTree = "<group>"; };
 		C166B151288741B800810B89 /* connect4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = connect4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C166B154288741B800810B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C166B156288741B800810B89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		C1B4AC81288BFE9A0015C1C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C109EFB12952FFFE00FC266C /* 677-trophy.json */,
 				C1B4AC7C288AC0A20015C1C5 /* 67230-trophy-winner.json */,
 				C166B15D288741BA00810B89 /* Assets.xcassets */,
 				C166B15F288741BA00810B89 /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C109EFB22952FFFE00FC266C /* 677-trophy.json in Resources */,
 				C166B161288741BA00810B89 /* LaunchScreen.storyboard in Resources */,
 				C166B15E288741BA00810B89 /* Assets.xcassets in Resources */,
 				C109EFB029523D1300FC266C /* MenuView.storyboard in Resources */,
