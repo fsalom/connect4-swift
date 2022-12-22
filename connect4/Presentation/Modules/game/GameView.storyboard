@@ -75,6 +75,7 @@
                         <outlet property="boardImage" destination="nSE-1z-rwI" id="kPh-8t-S6n"/>
                         <outlet property="contentView" destination="vvw-Bn-8mj" id="rEg-Vz-hL6"/>
                         <outlet property="currentChip" destination="qXE-qo-3VX" id="EoP-Ay-HbX"/>
+                        <outlet property="infoLabel" destination="2pc-6s-rHE" id="14M-2P-HLX"/>
                         <outlet property="startButton" destination="rEA-eB-6K9" id="Q9a-Fc-a5f"/>
                     </connections>
                 </viewController>

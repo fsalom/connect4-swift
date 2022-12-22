@@ -27,7 +27,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.24313727020000001" green="0.38431376220000002" blue="0.76862752440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Nuevo juego"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Nuevo juego">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onStartPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oDW-Ua-jkc"/>
                                 </connections>
@@ -50,6 +52,9 @@
                             <constraint firstItem="HMY-m1-Pzm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="aoc-L6-vSg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="HMY-m1-Pzm" id="B9d-S0-AZA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

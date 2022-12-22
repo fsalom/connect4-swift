@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  connect4
+
+  Created by Fernando Salom Carratala on 21/12/22.
+  
+*/
+
+"press_and_hold" = "presiona y mantén";
+"winner_red" = "Ganador ROJO";
+"winner_yellow" = "Ganador AMARILLO";
+"start" = "Empezar juego";

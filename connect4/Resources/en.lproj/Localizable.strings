@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  connect4
+
+  Created by Fernando Salom Carratala on 21/12/22.
+  
+*/
+
+"press_and_hold" = "press and hold";
+"winner_red" = "Winner RED";
+"winner_yellow" = "Winner YELLOW";
+"start" = "Start game";

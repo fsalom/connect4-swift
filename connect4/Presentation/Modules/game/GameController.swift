@@ -3,6 +3,7 @@ import Lottie
 
 class GameController: UIViewController {
 
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var boardImage: UIImageView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var currentChip: UIImageView!
@@ -36,6 +37,7 @@ class GameController: UIViewController {
         currentChip.layer.borderWidth = 4.0
         currentChip.layer.borderColor = UIColor.white.cgColor
         currentChip.layer.cornerRadius = currentChip.frame.width / 2
+        infoLabel.text =   NSLocalizedString("press_and_hold", comment: "press and hold")
     }
 
     func addGesture(){
@@ -64,7 +66,7 @@ class GameController: UIViewController {
         self.view.addSubview(view)
         self.view.bringSubviewToFront(self.boardImage)
         self.currentChip.image = UIImage(named: viewModel.getImageName(toggle: true))
-        viewModel.changePlayer()
+
     }
 
     @objc func addAnnotationOnLongPress(gesture: UILongPressGestureRecognizer) {
@@ -119,6 +121,7 @@ class GameController: UIViewController {
                 self.createChip(with: distance)
                 self.check()
                 self.chip.removeFromSuperview()
+                self.viewModel.changePlayer()
             }
         case .cancelled:
             chip.removeFromSuperview()

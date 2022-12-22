@@ -73,7 +73,9 @@ extension GameViewModel {
     }
 
     func getPlayerName() -> String {
-        return imageName == "chip1" ? "Ganador AMARILLO" :  "Ganador ROJO"
+        let winnerRed =  NSLocalizedString("winner_red", comment: "Winner RED")
+        let winnerYellow =  NSLocalizedString("winner_yellow", comment: "Winner YELLOW")
+        return imageName == "chip1" ? winnerYellow :  winnerRed
     }
     
     func getRowPosition(_ centerX: CGFloat) -> Int {

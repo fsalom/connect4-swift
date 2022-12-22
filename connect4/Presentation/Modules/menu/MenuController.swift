@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class MenuController: UIViewController {
+    @IBOutlet weak var startButton: UIButton!
     var viewModel: MenuViewModel!
 
     override func viewDidLoad() {
@@ -18,7 +19,8 @@ class MenuController: UIViewController {
     }
 
     func setupUI(){
-        
+        let text =  NSLocalizedString("start", comment: "Start Game")
+        startButton.setTitle(text, for: .normal)
     }
 
     @IBAction func onStartPressed(_ sender: Any) {
