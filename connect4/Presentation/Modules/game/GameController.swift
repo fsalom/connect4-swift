@@ -78,6 +78,7 @@ class GameController: UIViewController {
             return
         }
 
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         gestureLastState = gesture.state
 
         var point = gesture.location(in: self.contentView)
