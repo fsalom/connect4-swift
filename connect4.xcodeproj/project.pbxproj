@@ -18,6 +18,7 @@
 		C166B159288741B800810B89 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166B158288741B800810B89 /* GameController.swift */; };
 		C166B15E288741BA00810B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C166B15D288741BA00810B89 /* Assets.xcassets */; };
 		C166B161288741BA00810B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C166B15F288741BA00810B89 /* LaunchScreen.storyboard */; };
+		C188A73A2958C3DC00A94809 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C188A7392958C3DC00A94809 /* UIDevice.swift */; };
 		C1B4AC76288ABA5A0015C1C5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C1B4AC75288ABA5A0015C1C5 /* Lottie */; };
 		C1B4AC79288ABF5E0015C1C5 /* WinnerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B4AC78288ABF5E0015C1C5 /* WinnerView.storyboard */; };
 		C1B4AC7B288ABF770015C1C5 /* WinnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B4AC7A288ABF770015C1C5 /* WinnerController.swift */; };
@@ -43,6 +44,7 @@
 		C166B15D288741BA00810B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C166B160288741BA00810B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C166B162288741BA00810B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C188A7392958C3DC00A94809 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		C1B4AC78288ABF5E0015C1C5 /* WinnerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinnerView.storyboard; sourceTree = "<group>"; };
 		C1B4AC7A288ABF770015C1C5 /* WinnerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerController.swift; sourceTree = "<group>"; };
 		C1B4AC7C288AC0A20015C1C5 /* 67230-trophy-winner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "67230-trophy-winner.json"; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = connect4;
 			sourceTree = "<group>";
 		};
+		C188A7382958C3CB00A94809 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C188A7392958C3DC00A94809 /* UIDevice.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C1B4AC77288ABF420015C1C5 /* winner */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		C1B4AC82288BFEBE0015C1C5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C188A7382958C3CB00A94809 /* Helper */,
 				C1B4AC83288BFECB0015C1C5 /* App */,
 				C1B4AC84288BFED70015C1C5 /* Modules */,
 			);
@@ -248,6 +259,7 @@
 				C109EFAE29523CD800FC266C /* MenuRouter.swift in Sources */,
 				C1B4AC7B288ABF770015C1C5 /* WinnerController.swift in Sources */,
 				C166B159288741B800810B89 /* GameController.swift in Sources */,
+				C188A73A2958C3DC00A94809 /* UIDevice.swift in Sources */,
 				C166B155288741B800810B89 /* AppDelegate.swift in Sources */,
 				C1B4AC8D288E9D440015C1C5 /* GameRouter.swift in Sources */,
 				C166B157288741B800810B89 /* SceneDelegate.swift in Sources */,
