@@ -85,8 +85,6 @@ class GameController: UIViewController {
         switch gesture.state {
         case .began:
             UIDevice.vibrate()
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
-            generator.impactOccurred()
             self.view.addSubview(chipIndicator)
             chip.center = point
             chip.image = UIImage(named: viewModel.getImageName())
